@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Step Up for Peace</title>
+  <title>Step Up for Peace with GAPSAFRICA</title>    
+  <link rel="icon" type="image/icon" href="assets/favicon.png">
+
   <style>
     * {
       box-sizing: border-box;
@@ -497,7 +499,7 @@
         <div class="post-preview" id="postPreview" hidden>
           <h3>Your Share Image</h3>
 
-          <img id="generatedImagePreview" alt="Generated Step for GAPSAfrica social media post" />
+          <img id="generatedImagePreview" alt="Generated Step Up for Peace social media post" />
 
           <div class="generated-caption">
             <div class="caption-header">
@@ -548,7 +550,7 @@
     const generatedCaption = document.getElementById("generatedCaption");
     const copyCaptionBtn = document.getElementById("copyCaptionBtn");
 
-    const campaignUrl = "stepforpeace.gapsafrica.org";
+    const campaignUrl = "stepupforpeace.gapsafrica.org";
 
     const campaignImageSrc = "assets/p92.jpg";
     const campaignImage = new Image();
@@ -615,15 +617,15 @@
       const formattedSteps = steps.toLocaleString();
 
       if (donated) {
-        return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
+        return `I just walked ${formattedSteps} steps for Peace 💛
 
 I've donated to help support education, meals, and care for children in Nakivale Refugee Camp.
 
 Join me: walk, share, or give.
 
-https://stepforpeace.gapsafrica.org
+https://stepupforpeace.gapsafrica.org
 
-#StepForGAPSAfrica`;
+#StepUpForPeace`;
       }
 
       return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
@@ -632,9 +634,9 @@ Every step helps raise awareness for children in Nakivale Refugee Camp.
 
 Join me: walk, share, or give.
 
-https://stepforpeace.gapsafrica.org
+https://stepupforpeace.gapsafrica.org
 
-#StepForGAPSAfrica`;
+#StepUpForPeace`;
     }
 
     function drawSocialImage(steps, donated) {
@@ -671,7 +673,7 @@ https://stepforpeace.gapsafrica.org
 
         ctx.fillStyle = "#e6b200";
         ctx.font = "900 34px system-ui, sans-serif";
-        ctx.fillText("STEP FOR GAPSAFRICA", 95, 135);
+        ctx.fillText("STEP UP FOR PEACE", 95, 135);
 
         ctx.fillStyle = "#ffffff";
         ctx.font = "900 88px system-ui, sans-serif";
@@ -716,7 +718,7 @@ https://stepforpeace.gapsafrica.org
 
         ctx.fillStyle = "#e6b200";
         ctx.font = "900 30px system-ui, sans-serif";
-        ctx.fillText("#StepForGAPSAfrica", 690, 1010);
+        ctx.fillText("#StepUpForPeace", 690, 1010);
 
         imagePreview.src = canvas.toDataURL("image/png");
       };
