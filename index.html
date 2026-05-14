@@ -263,6 +263,38 @@
       margin-top: 1rem;
     }
 
+    .donation-cta {
+  margin-top: 1.5rem;
+  background: #063f1f;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.donation-cta p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.92);
+}
+
+.donation-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  background: #e6b200;
+  color: #063f1f;
+  text-decoration: none;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.donation-btn:hover {
+  transform: translateY(-2px);
+}
     @media (max-width: 850px) {
       body {
         padding: 1rem;
@@ -340,7 +372,7 @@
 
         <label class="donated-check" for="shareDonatedCheckbox">
           <input type="checkbox" id="shareDonatedCheckbox" />
-          I donated after walking
+          I've donated to GAPSAFRICA
         </label>
 
         <button id="generatePostBtn" class="step-btn step-btn-primary">
@@ -380,6 +412,20 @@
               Share Image
             </button>
           </div>
+          <div class="donation-cta">
+  <p>
+    Your steps created awareness. Your donation creates direct impact.
+  </p>
+
+  <a
+    href="https://www.gofundme.com/f/big-up-community-children-and-youth-peace-academy-nakivale?attribution_id=sl:c94a0da3-baa2-47ba-aafb-d328f73e4c19&lang=en_US&ts=1776149291&utm_campaign=man_sharesheet_dash&utm_content=amp17_tc&utm_medium=customer&utm_source=copy_link"
+    target="_blank"
+    rel="noopener"
+    class="donation-btn"
+  >
+    Donate to GAPSAfrica
+  </a>
+</div>
         </div>
       </div>
     </section>
@@ -402,7 +448,7 @@
     const generatedCaption = document.getElementById("generatedCaption");
     const copyCaptionBtn = document.getElementById("copyCaptionBtn");
 
-    const campaignUrl = "gapsafrica.org";
+    const campaignUrl = "stepforpeace.gapsafrica.org";
 
     const campaignImageSrc = "assets/p92.jpg";
     const campaignImage = new Image();
@@ -466,26 +512,30 @@
     }
 
     function createCaption(steps, donated) {
-      const formattedSteps = steps.toLocaleString();
+  const formattedSteps = steps.toLocaleString();
 
-      if (donated) {
-        return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
+  if (donated) {
+    return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
 
-I donated to help support education, meals, and care for children in Nakivale Refugee Camp.
+I've donated to help support education, meals, and care for children in Nakivale Refugee Camp.
 
 Join me: walk, share, or give.
 
-#StepForGAPSAfrica`;
-      }
+https://stepforpeace.gapsafrica.org
 
-      return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
+#StepForGAPSAfrica`;
+  }
+
+  return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
 
 Every step helps raise awareness for children in Nakivale Refugee Camp.
 
 Join me: walk, share, or give.
 
+https://stepforpeace.gapsafrica.org
+
 #StepForGAPSAfrica`;
-    }
+}
 
     function drawSocialImage(steps, donated) {
       const formattedSteps = steps.toLocaleString();
