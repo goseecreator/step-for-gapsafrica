@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Step for GAPSAfrica</title>
-
+  <title>Step Up for Peace</title>
   <style>
     * {
       box-sizing: border-box;
@@ -25,6 +25,97 @@
     .page-shell {
       max-width: 1180px;
       margin: 0 auto;
+    }
+
+    /* =========================
+   CAMPAIGN NAV
+========================= */
+
+    .campaign-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+
+      background: rgba(255, 253, 245, 0.82);
+      backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(6, 63, 31, 0.08);
+      border-radius: 1.25rem;
+
+      box-shadow: 0 10px 30px rgba(6, 63, 31, 0.08);
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #063f1f;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #063f1f;
+      font-weight: 700;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    .nav-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+      padding: 0 1.2rem;
+
+      border-radius: 999px;
+
+      background: #063f1f;
+      color: white !important;
+
+      box-shadow: 0 8px 20px rgba(6, 63, 31, 0.18);
+    }
+
+    .nav-donate:hover {
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+   MOBILE NAV
+========================= */
+
+    @media (max-width: 768px) {
+      .campaign-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .nav-donate {
+        width: 100%;
+      }
     }
 
     .hero {
@@ -264,37 +355,38 @@
     }
 
     .donation-cta {
-  margin-top: 1.5rem;
-  background: #063f1f;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
-  text-align: center;
-}
+      margin-top: 1.5rem;
+      background: #063f1f;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      text-align: center;
+    }
 
-.donation-cta p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.92);
-}
+    .donation-cta p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.92);
+    }
 
-.donation-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 1.5rem;
-  border-radius: 999px;
-  background: #e6b200;
-  color: #063f1f;
-  text-decoration: none;
-  font-weight: 900;
-  transition: 0.2s ease;
-}
+    .donation-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 1.5rem;
+      border-radius: 999px;
+      background: #e6b200;
+      color: #063f1f;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
 
-.donation-btn:hover {
-  transform: translateY(-2px);
-}
+    .donation-btn:hover {
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 850px) {
       body {
         padding: 1rem;
@@ -315,24 +407,43 @@
         font-size: 0.8rem;
       }
     }
+
+    .field-help {
+      margin-top: -0.5rem;
+      font-size: 0.9rem;
+      color: #1c1c1c;
+      opacity: 0.75;
+    }
   </style>
 </head>
 
 <body>
+  <nav class="campaign-nav">
+    <a href="https://gapsafrica.org" class="nav-logo">GAPSAFRICA</a>
+
+    <div class="nav-links">
+      <a href="https://gapsafrica.org">Explore</a>
+      <a href="https://www.gofundme.com/f/big-up-community-children-and-youth-peace-academy-nakivale?attribution_id=sl:c94a0da3-baa2-47ba-aafb-d328f73e4c19&lang=en_US&ts=1776149291&utm_campaign=man_sharesheet_dash&utm_content=amp17_tc&utm_medium=customer&utm_source=copy_link"
+        class="nav-donate" target="_blank" rel="noopener">
+        Donate
+      </a>
+    </div>
+  </nav>
   <main class="page-shell">
     <section class="hero">
       <div>
         <p class="kicker">Global Alliance for Peace & Solidarity for Africa</p>
 
         <h1>
-          <span>Step</span>
-          for GAPSAfrica
+          <span>Step Up</span>
+          for Peace
         </h1>
 
         <p>
-          Enter your daily steps and generate a branded social post to share your support for children in Nakivale Refugee Camp.
-        </p>
+          GAPSAfrica is stepping up for peace, solidarity, and education in Nakivale Refugee Camp. Walk with us, share
+          your steps, and invite others to join the movement. </p>
       </div>
+
 
       <div class="hero-image">
         <img src="assets/p36.jpg" alt="Children supported by GAPSAfrica" />
@@ -343,37 +454,37 @@
     <section class="generator-card">
       <p class="kicker">Social Post Generator</p>
 
-      <h2>Generate Your Share Image</h2>
+      <h2>Create Your Step Up for Peace Post</h2>
 
       <p class="generator-intro">
-        Enter your step count and create a branded social post to share your support for GAPSAfrica.
+        Walk or move in your own way, enter your step count, and generate a branded image to share online.
       </p>
 
       <div class="share-help">
-        <p><strong>Best sharing experience:</strong></p>
+        <p><strong>How it works:</strong></p>
 
         <ol>
-          <li>Generate your image</li>
-          <li>Download the post</li>
-          <li>Copy the caption</li>
-          <li>Share it on Instagram, Facebook, or Stories</li>
+          <li>Take a walk or track your movement</li>
+          <li>Enter your step count</li>
+          <li>Generate your share image</li>
+          <li>Download the image and copy the caption</li>
+          <li>Post it to invite others to step up for peace</li>
         </ol>
       </div>
 
       <div class="generator-ui">
         <label for="shareStepsInput">Today’s Steps</label>
 
-        <input
-          id="shareStepsInput"
-          type="number"
-          min="1"
-          placeholder="Example: 10000"
-        />
+        <input id="shareStepsInput" type="number" min="1" placeholder="Example: 10000" />
 
         <label class="donated-check" for="shareDonatedCheckbox">
           <input type="checkbox" id="shareDonatedCheckbox" />
           I've donated to GAPSAFRICA
         </label>
+
+        <p class="field-help">
+          This adds an “I donated” badge to your generated post.
+        </p>
 
         <button id="generatePostBtn" class="step-btn step-btn-primary">
           Generate My Post
@@ -386,10 +497,7 @@
         <div class="post-preview" id="postPreview" hidden>
           <h3>Your Share Image</h3>
 
-          <img
-            id="generatedImagePreview"
-            alt="Generated Step for GAPSAfrica social media post"
-          />
+          <img id="generatedImagePreview" alt="Generated Step for GAPSAfrica social media post" />
 
           <div class="generated-caption">
             <div class="caption-header">
@@ -407,26 +515,19 @@
             <button id="downloadImageBtn" class="step-btn step-btn-secondary">
               Download Image
             </button>
-
-            <button id="shareImageBtn" class="step-btn step-btn-donate">
-              Share Image
-            </button>
           </div>
           <div class="donation-cta">
-  <p>
-    Your steps created awareness. Your donation creates direct impact.
-  </p>
+            <p>
+              Your steps created awareness. Your donation creates direct impact.
+            </p>
 
-  <a
-    href="https://www.gofundme.com/f/big-up-community-children-and-youth-peace-academy-nakivale?attribution_id=sl:c94a0da3-baa2-47ba-aafb-d328f73e4c19&lang=en_US&ts=1776149291&utm_campaign=man_sharesheet_dash&utm_content=amp17_tc&utm_medium=customer&utm_source=copy_link"
-    target="_blank"
-    rel="noopener"
-    class="donation-btn"
-  >
-    Donate to GAPSAfrica
-  </a>
-</div>
+            <a href="https://www.gofundme.com/f/big-up-community-children-and-youth-peace-academy-nakivale?attribution_id=sl:c94a0da3-baa2-47ba-aafb-d328f73e4c19&lang=en_US&ts=1776149291&utm_campaign=man_sharesheet_dash&utm_content=amp17_tc&utm_medium=customer&utm_source=copy_link"
+              target="_blank" rel="noopener" class="donation-btn">
+              Donate to GAPSAfrica
+            </a>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   </main>
@@ -443,7 +544,6 @@
 
     const imagePreview = document.getElementById("generatedImagePreview");
     const downloadImageBtn = document.getElementById("downloadImageBtn");
-    const shareImageBtn = document.getElementById("shareImageBtn");
 
     const generatedCaption = document.getElementById("generatedCaption");
     const copyCaptionBtn = document.getElementById("copyCaptionBtn");
@@ -512,10 +612,10 @@
     }
 
     function createCaption(steps, donated) {
-  const formattedSteps = steps.toLocaleString();
+      const formattedSteps = steps.toLocaleString();
 
-  if (donated) {
-    return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
+      if (donated) {
+        return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
 
 I've donated to help support education, meals, and care for children in Nakivale Refugee Camp.
 
@@ -524,9 +624,9 @@ Join me: walk, share, or give.
 https://stepforpeace.gapsafrica.org
 
 #StepForGAPSAfrica`;
-  }
+      }
 
-  return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
+      return `I just walked ${formattedSteps} steps for GAPSAfrica 💛
 
 Every step helps raise awareness for children in Nakivale Refugee Camp.
 
@@ -535,7 +635,7 @@ Join me: walk, share, or give.
 https://stepforpeace.gapsafrica.org
 
 #StepForGAPSAfrica`;
-}
+    }
 
     function drawSocialImage(steps, donated) {
       const formattedSteps = steps.toLocaleString();
@@ -668,23 +768,7 @@ https://stepforpeace.gapsafrica.org
       link.click();
     });
 
-    shareImageBtn.addEventListener("click", async () => {
-      canvas.toBlob(async (blob) => {
-        const file = new File([blob], "step-for-gapsafrica.png", {
-          type: "image/png"
-        });
-
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            title: "Step for GAPSAfrica",
-            text: generatedCaption.textContent,
-            files: [file]
-          });
-        } else {
-          downloadImageBtn.click();
-        }
-      });
-    });
   </script>
 </body>
+
 </html>
